@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        All Cars
+    </h1>
+    <table>
+        <tr>
+          <th>Car ID</th>
+          <th>E Name</th>
+          <th>A Name</th>
+          <th>Launch Date</th>
+          <th>Company</th>
+          <th>Model</th>
+          <th>Colour</th>
+        {% for car in cars%}
+        </tr>
+            <td><a href="{{car.car_id}}">{{car.car_id}}</a></td
+            <td>{{car.launch_date}}</td>
+            <td>{{car.arabic_name}}</td>
+            <td>{{car.company}}</td>
+            <td>{{car.model}}</td>
+            <td>{{car.colour}}</td>
+            <td>{{car.english_name}}</td>
+            <td><a href="delete/{{car.car_id}}">DELETE</a></td>
+        <tr>
+        {% endfor %}
+      </table>
+
+    <div class="text-center">
+        <form action="{{url_for('create')}}" method="post">
+            <input type="text" id="ename" name="ename" value="ename"><br>
+            <input type="text" id="aname" name="aname" value="aname"><br>
+            <input type="text" id="model" name="model" value="model"><br>
+            <input type="text" id="company" name="company" value="company"><br>
+            <input type="number" id="year" name="year" value="year"><br>
+            <input type="text" id="colour_id" name="colour_id" value="colour_id"><br>
+            <input type="date" id="launch_date" name="launch_date" value="launch_date"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

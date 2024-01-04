@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        {{car.car_id}}
+    </h1>
+    <a href="{{car.car_id}}">{{car.car_id}}</a>
+    <p>{{car.launch_date}}</p>
+    <p>{{car.arabic_name}}</p>
+    <p>{{car.company}}</p>
+    <p>{{car.model}}</p>
+    <p>{{car.colour}}</p>
+    <p>{{car.english_name}}</p>
+
+    <div class="text-center">
+        <h1>
+            Edit {{car.car_id}}
+        </h1>
+        <form action="update/{{car.car_id}}" method="post">
+            <input type="text" id="ename" name="ename" ><br>
+            <input type="text" id="aname" name="aname"><br>
+            <input type="text" id="model" name="model"><br>
+            <input type="text" id="company" name="company"><br>
+            <input type="number" id="year" name="year"><br>
+            <input type="text" id="colour_id" name="colour_id"><br>
+            <input type="date" id="launch_date" name="launch_date"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+</body>
+</html>
